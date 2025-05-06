@@ -1,0 +1,1 @@
+# A Next.js React generated blog example website using Next.js, Markdown, and TypeScript
