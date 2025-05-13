@@ -14,16 +14,22 @@ const CoverImage = ({ title, src, slug }: Props) => {
       src={src}
       alt={`Cover Image for ${title}`}
       className={cn("shadow-sm w-full", {
-        "hover:shadow-lg transition-shadow duration-200": slug,
+        "hover:shadow-xl transition-shadow duration-200 dark:hover:shadow-white/10 transition-shadow duration-200": slug,
       })}
-      width={1300}
-      height={630}
+      width={2000}
+      height={1000}
+      sizes="100vw"
+      style={{
+        width: '100vw',
+        height: 'auto',
+        maxHeight: '80vh'
+      }}
     />
   );
   return (
     <div className="sm:mx-0">
       {slug ? (
-        <Link href={`/posts/${slug}`} aria-label={title}>
+        <Link href={`/posts/categories/${slug}`} aria-label={title}>
           {image}
         </Link>
       ) : (
